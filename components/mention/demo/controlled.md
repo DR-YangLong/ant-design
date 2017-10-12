@@ -15,12 +15,12 @@ Controlled mode, for example, to work with `Form`.
 
 ````jsx
 import { Mention, Form, Button } from 'antd';
-const { toEditorState, getMentions } = Mention;
+const { toContentState, getMentions } = Mention;
 const FormItem = Form.Item;
 
 class App extends React.Component {
   state = {
-    initValue: toEditorState('@afc163'),
+    initValue: toContentState('@afc163'),
   }
   handleReset = (e) => {
     e.preventDefault();
@@ -50,12 +50,12 @@ class App extends React.Component {
     const { getFieldDecorator, getFieldValue } = this.props.form;
     console.log('>> render', getFieldValue('mention') === this.state.initValue);
     return (
-      <Form horizontal>
+      <Form layout="horizontal">
         <FormItem
           id="control-mention"
           label="Top coders"
           labelCol={{ span: 6 }}
-          wrapperCol={{ span: 14 }}
+          wrapperCol={{ span: 16 }}
         >
           {getFieldDecorator('mention', {
             rules: [

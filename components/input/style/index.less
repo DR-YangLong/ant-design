@@ -11,16 +11,19 @@
 //== Style for input-group: input with label, with button or dropdown...
 .@{ant-prefix}-input-group {
   .input-group(~"@{ant-prefix}-input");
+  &-wrapper {
+    display: inline-block;
+    vertical-align: top; // https://github.com/ant-design/ant-design/issues/6403
+    width: 100%;
+  }
 }
 
-// Input with suffix
-.@{ant-prefix}-input-preSuffix-wrapper {
-  .input-preSuffix-wrapper(~"@{ant-prefix}-input");
-}
+// Input with affix: prefix or suffix
+.@{ant-prefix}-input-affix-wrapper {
+  .input-affix-wrapper(~"@{ant-prefix}-input");
 
-// chrome only hack, fix https://github.com/ant-design/ant-design/issues/4987
-@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
-  input.@{ant-prefix}-input {
-    line-height: inherit;
+  // https://github.com/ant-design/ant-design/issues/6144
+  .@{ant-prefix}-input {
+    min-height: 100%;  // use min-height, assume that no smaller height to override
   }
 }

@@ -1,5 +1,5 @@
 ---
-order: 12
+order: 11
 title:
   zh-CN: 表单联动
   en-US: Coordinated Controls
@@ -55,15 +55,19 @@ class App extends React.Component {
         >
           {getFieldDecorator('gender', {
             rules: [{ required: true, message: 'Please select your gender!' }],
-            onChange: this.handleSelectChange,
           })(
-            <Select placeholder="Select a option and change input text above">
+            <Select
+              placeholder="Select a option and change input text above"
+              onChange={this.handleSelectChange}
+            >
               <Option value="male">male</Option>
               <Option value="female">female</Option>
             </Select>
           )}
         </FormItem>
-        <FormItem wrapperCol={{ span: 8, offset: 4 }}>
+        <FormItem
+          wrapperCol={{ span: 8, offset: 4 }}
+        >
           <Button type="primary" htmlType="submit">
             Submit
           </Button>

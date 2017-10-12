@@ -17,7 +17,7 @@ Use `defaultFileList` for uploaded files when page init.
 import { Upload, Button, Icon } from 'antd';
 
 const props = {
-  action: '/upload.do',
+  action: '//jsonplaceholder.typicode.com/posts/',
   onChange({ file, fileList }) {
     if (file.status !== 'uploading') {
       console.log(file, fileList);
@@ -27,7 +27,7 @@ const props = {
     uid: 1,
     name: 'xxx.png',
     status: 'done',
-    reponse: 'Server Error 500',  // custom error message to show
+    reponse: 'Server Error 500', // custom error message to show
     url: 'http://www.baidu.com/xxx.png',
   }, {
     uid: 2,
@@ -38,7 +38,7 @@ const props = {
     uid: 3,
     name: 'zzz.png',
     status: 'error',
-    reponse: 'Server Error 500',  // custom error message to show
+    reponse: 'Server Error 500', // custom error message to show
     url: 'http://www.baidu.com/zzz.png',
   }],
 };

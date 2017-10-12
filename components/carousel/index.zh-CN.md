@@ -22,18 +22,7 @@ subtitle: 走马灯
 | vertical | 垂直显示 | boolean   | false |
 | autoplay | 是否自动切换 | boolean   | false |
 | easing | 动画效果 | string   | linear |
-| beforeChange      | 切换面板的回调                              | function(from, to) | 无
-| afterChange       | 切换面板的回调                              | function(current)  | 无
+| beforeChange      | 切换面板的回调                              | function(from, to) | 无 |
+| afterChange       | 切换面板的回调                              | function(current)  | 无 |
 
 更多参数可参考：https://github.com/akiran/react-slick
-
-<style>
-.ant-carousel .slick-slide {
-  text-align: center;
-  height: 160px;
-  line-height: 130px;
-  background: #506b9e;
-  color: #fff;
-  overflow: hidden;
-}
-</style>
